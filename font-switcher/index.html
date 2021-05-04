@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter | Javascript</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+
+<body class="flex-column d-flex align-items-center justify-content-center">
+
+    <h1 id="text" class="display-1">Font Switcher</h1>
+
+    <div class="form-group w-50">
+        <label for="fontSwitch">Select a Font</label>
+        <select id="fontSwitch" class="form-control"></select>
+    </div>
+    <div class="form-group w-50">
+        <label for="fontSlider">Select a value <span id="size" class="badge badge-primary"></span> </label>
+        <input value="100" min="100" max="150" id="fontSlider" class="form-control" type="range">
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
