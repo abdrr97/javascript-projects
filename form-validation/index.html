@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation | Javascript</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-center align-items-center">
+
+
+    <div class="container w-50">
+        <h1 class="display-4">Form Validation</h1>
+
+        <div id="error" class="text-danger">the <strong>username</strong> is already set</div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input id="password" name="password" type="password" class="form-control">
+        </div>
+
+        <button class="btn btn-outline-primary">submit</button>
+    </div>
+
+</body>
+
+</html>
