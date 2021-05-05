@@ -13,6 +13,33 @@
         body {
             height: 100vh;
         }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            50%,
+            90% {
+                transform: translateX(-10px);
+            }
+
+            20%,
+            30%,
+            40%,
+            60%,
+            70%,
+            80% {
+                transform: translateX(10px);
+            }
+        }
+
+        .shake {
+            animation: 3s infinite shake;
+        }
     </style>
 </head>
 
@@ -20,25 +47,22 @@
 
 
     <div class="container w-50">
-        <h1 class="display-4">Form Validation</h1>
+        <form>
+            <h1 class="display-2">Form Validation</h1>
+            <div class="alert alert-success">form validated</div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" class="form-control">
+                <div class="invalid-feedback">
+                    Please provide a valid username.
+                </div>
+            </div>
 
-        <div id="error" class="text-danger">the <strong>username</strong> is already set</div>
-
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input id="username" name="username" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">password</label>
-            <input id="password" name="password" type="password" class="form-control">
-        </div>
-
-        <button class="btn btn-outline-primary">submit</button>
+            <button id="btn" class="btn btn-outline-primary">submit</button>
+        </form>
     </div>
+
+    <script src="./script.js"></script>
 
 </body>
 
