@@ -16,9 +16,14 @@
 </head>
 
 
-<body class="flex-column d-flex align-items-center justify-content-center">
+<body class="d-flex justify-content-center align-items-center flex-column">
+    <header>
+        <h1 class="display-1">Forms</h1>
+    </header>
+    <label for="your-text"> Write Your Text Here</label>
+    <input placeholder="write your text" class="form-control w-50" id="your-text">
 
-    <h1 id="text" class="display-1">Font Switcher</h1>
+    <h5 id="text" class="display-3">your text</h5>
 
     <div class="form-group w-50">
         <label for="fontSwitch">Select a Font</label>
@@ -28,7 +33,10 @@
         <label for="fontSlider">Select a value <span id="size" class="badge badge-primary"></span> </label>
         <input value="100" min="100" max="150" id="fontSlider" class="form-control" type="range">
     </div>
-
+    <div class="form-group w-50">
+        <label for="fontColor">Color <span id="color"></span> </label>
+        <input id="fontColor" class="form-control" type="color">
+    </div>
     <script src="./main.js"></script>
 </body>
 
