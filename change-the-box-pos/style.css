@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  background-color: #434343;
+  cursor: pointer;
+}
+
+#box {
+  background-color: white;
+  padding: 3px;
+  color: #434343;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
