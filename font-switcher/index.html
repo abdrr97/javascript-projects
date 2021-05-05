@@ -16,27 +16,47 @@
 </head>
 
 
-<body class="d-flex justify-content-center align-items-center flex-column">
-    <header>
-        <h1 class="display-1">Forms</h1>
-    </header>
-    <label for="your-text"> Write Your Text Here</label>
-    <input placeholder="write your text" class="form-control w-50" id="your-text">
+<body class="">
+    <main class="container">
+        <header>
+            <h1 class="display-4">Forms</h1>
+        </header>
+        <label for="your-text"> Write Your Text Here</label>
+        <input placeholder="write your text" class="form-control" id="your-text">
 
-    <h5 id="text" class="display-3">your text</h5>
+        <h5 id="text" class="display-1">your text</h5>
 
-    <div class="form-group w-50">
-        <label for="fontSwitch">Select a Font</label>
-        <select id="fontSwitch" class="form-control"></select>
-    </div>
-    <div class="form-group w-50">
-        <label for="fontSlider">Select a value <span id="size" class="badge badge-primary"></span> </label>
-        <input value="100" min="100" max="150" id="fontSlider" class="form-control" type="range">
-    </div>
-    <div class="form-group w-50">
-        <label for="fontColor">Color <span id="color"></span> </label>
-        <input id="fontColor" class="form-control" type="color">
-    </div>
+        <div class="form-group">
+            <label for="fontSwitch">Select a Font</label>
+            <select id="fontSwitch" class="form-control"></select>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <label for="fontSlider">Select a value <span id="size" class="badge badge-primary"></span> </label>
+                <input value="100" min="100" max="150" id="fontSlider" class="form-control" type="range">
+            </div>
+            <div class="col form-group">
+                <label for="fontColor">Color <span id="color"></span> </label>
+                <input id="fontColor" class="form-control" type="color">
+            </div>
+
+        </div>
+        <button id="generate" class="btn btn-outline-primary mb-5">Generate</button>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                Font Family : <span id="font-family">sans-serif</span>
+            </li>
+            <li class="list-group-item">
+                Font Size : <span id="font-size">130px</span>
+            </li>
+            <li class="list-group-item">
+                Color : <span id="font-color">red</span>
+            </li>
+        </ul>
+
+
+    </main>
     <script src="./main.js"></script>
 </body>
 
