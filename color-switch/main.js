@@ -1,1 +1,15 @@
-const _0x4963 = ['133ZunDpB', '#color-code', 'offsetY', '87149LuKRIN', '5AGijYf', 'style', '388374REPwMB', 'backgroundColor', 'body', 'addEventListener', '270PNULqO', '1727542cbcEey', 'querySelector', '666760xoCPSW', 'rgb(', 'Color\x20Switch', '2349pRFdlY', '63055MjZXZX', '489HjqVqc', 'mousemove', 'textContent', 'offsetX']; const _0x50029a = _0x39ce; (function (_0x3e8ad4, _0xc7e40f) { const _0x19f40c = _0x39ce; while (!![]) { try { const _0x5010c8 = parseInt(_0x19f40c(0x207)) + parseInt(_0x19f40c(0x200)) + parseInt(_0x19f40c(0x204)) * parseInt(_0x19f40c(0x1f4)) + -parseInt(_0x19f40c(0x1fa)) * -parseInt(_0x19f40c(0x1f6)) + parseInt(_0x19f40c(0x1fd)) * parseInt(_0x19f40c(0x1fe)) + -parseInt(_0x19f40c(0x1f5)) + -parseInt(_0x19f40c(0x205)); if (_0x5010c8 === _0xc7e40f) break; else _0x3e8ad4['push'](_0x3e8ad4['shift']()); } catch (_0x47f3f1) { _0x3e8ad4['push'](_0x3e8ad4['shift']()); } } }(_0x4963, 0x618bd), console['log'](_0x50029a(0x209))); function _0x39ce(_0x534f53, _0x28234b) { _0x534f53 = _0x534f53 - 0x1f4; let _0x496380 = _0x4963[_0x534f53]; return _0x496380; } const body = document['querySelector'](_0x50029a(0x202)), colorCode = document[_0x50029a(0x206)](_0x50029a(0x1fb)); body[_0x50029a(0x203)](_0x50029a(0x1f7), onMouseMove); function onMouseMove(_0x47d934) { const _0x2aa5b7 = _0x50029a; let _0x57142b = _0x2aa5b7(0x208) + _0x47d934[_0x2aa5b7(0x1f9)] + ',' + _0x47d934[_0x2aa5b7(0x1fc)] + ',' + (_0x47d934[_0x2aa5b7(0x1f9)] - _0x47d934[_0x2aa5b7(0x1fc)]) + ')'; body[_0x2aa5b7(0x1ff)][_0x2aa5b7(0x201)] = _0x57142b, colorCode[_0x2aa5b7(0x1f8)] = _0x57142b; }
+const generate = document.querySelector('#generate')
+const colorCode = document.querySelector('#color-code')
+colorCode.innerText = '#FFFFFF'
+
+generate.addEventListener('click', function () {
+
+    let r = Math.floor(Math.random() * 255)
+    let g = Math.floor(Math.random() * 255)
+    let b = Math.floor(Math.random() * 255)
+
+    const color = `rgb(${r},${g},${b})`
+    document.body.style.background = color
+    colorCode.innerText = color
+})
+

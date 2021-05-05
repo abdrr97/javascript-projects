@@ -11,6 +11,7 @@
     <style>
         body {
             height: 100vh;
+            transition: background .4s ease-in;
         }
 
         .alert>span {
@@ -25,9 +26,11 @@
 
 <body class="d-flex align-items-center justify-content-center">
 
-    <div class="w-50 alert alert-secondary d-flex justify-content-center">
-        background color is : <span id="color-code">#hehehe</span>
+    <div class="w-50 alert alert-secondary d-flex justify-content-center flex-column">
+        <div class="">background color is : <strong id="color-code">#hehehe</strong></div>
+        <button id="generate" class="my-3 btn btn-primary">Generate</button>
     </div>
+
 
     <script src="./main.js"></script>
 </body>
