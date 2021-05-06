@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i.fas {
+  font-size: 45px;
+  color: black;
+  margin: 15px 20px;
+}
+.image-container {
+  height: 250px;
+  width: 550px;
+  background-image: url('./images/1.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
