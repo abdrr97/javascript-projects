@@ -35,4 +35,6 @@ i.fas {
   background-position: center;
   background-size: cover;
   border-radius: 5px;
+
+  transition: background-image 0.2s;
 }

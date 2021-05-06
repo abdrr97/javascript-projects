@@ -181,7 +181,7 @@ body {
   flex-direction: row;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .card {
   transition: box-shadow 0.5s;

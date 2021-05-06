@@ -15,6 +15,7 @@ const moveLeft = function () {
     index = index < (images.length - 1) ? index += 1 : 0
     let image = images[index]
     imageContainer.style.backgroundImage = `url(./images/${image})`
+    // imageContainer.setAttribute('src', `./images/${image}`)
 }
 
 const moveRight = function () {
@@ -26,8 +27,8 @@ const moveRight = function () {
         index--
     }
     let image = images[index]
-    console.log(image)
     imageContainer.style.backgroundImage = `url(./images/${image})`
+    // imageContainer.setAttribute('src', `./images/${image}`)
 }
 
 left.addEventListener('click', moveLeft)
@@ -37,7 +38,7 @@ right.addEventListener('click', moveRight)
 let moving
 
 play.addEventListener('click', function () {
-    moving = setInterval(moveLeft, 1000)
+    moving = setInterval(moveLeft, 3000)
 })
 pause.addEventListener('click', function () {
     clearInterval(moving)
