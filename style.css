@@ -174,13 +174,10 @@
 }
 
 body {
-  display: flex;
   font-family: 'Roboto', sans-serif;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 100vh;
   margin: 0;
+  padding: 50px 10px;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 .card {
@@ -188,5 +185,23 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.235) !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+#loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: rebeccapurple;
+  /* animation: spinner 0.2s infinite linear; */
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
