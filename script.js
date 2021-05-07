@@ -65,6 +65,10 @@ const links = [
     {
         label: 'carousel',
         link: './carousel',
+    },
+    {
+        label: 'Todo List',
+        link: './todo-list',
     }
 ]
 
