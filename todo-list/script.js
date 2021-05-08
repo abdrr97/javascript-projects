@@ -41,8 +41,6 @@ const onAddTodoClick = function (e) {
 
         createTodoListElement(todo.value)
     }
-
-    console.log('clicked 😊')
 }
 
 const onDeleteTodoClick = function (e) {
@@ -62,13 +60,18 @@ const onDeleteTodoClick = function (e) {
 
 const loadTodos = function (e) {
 
-    todos = JSON.parse(localStorage.getItem('todos'))
+    if (JSON.parse(localStorage.getItem('todos')) == null) {
+        todos = []
+    } else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+
+    // todos = JSON.parse(localStorage.getItem('todos'))
 
     todos.forEach(function (todoElement) {
         createTodoListElement(todoElement.todo)
     });
 
-    console.log(todos)
 }
 
 const createTodoListElement = function (value) {
