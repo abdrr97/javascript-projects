@@ -134,12 +134,12 @@ filter.addEventListener('input', (e) => {
     })
     todosList.innerHTML = ''
     filterdTodos.forEach(function (todoElement) {
-        createTodoListElement(todoElement.todo)
+        createTodoListElement(todoElement)
     });
     if (keyword === '') {
         filterdTodos = []
         todos.forEach(function (todoElement) {
-            createTodoListElement(todoElement.todo)
+            createTodoListElement(todoElement)
         });
     }
 })
