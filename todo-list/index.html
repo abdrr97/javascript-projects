@@ -17,21 +17,20 @@
     <h1>todos</h1>
     <main class="main">
 
-        <form class="form">
-            <input id="todo" placeholder="Enter Your Todo" class="todo-input" type="text">
-            <button id="btn" class="btn">
-                Add Todo <i class="fas fa-plus"></i>
-            </button>
+        <form>
+            <input id="todo" placeholder="enter your todo" class="todo-input" type="text">
+            <div class="button-group">
+                <button type="button" id="clearAll" class="btn">
+                    Clear All <i class="fas fa-recycle"></i>
+                </button>
+                <button id="btn" class="btn">
+                    Add Todo <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <input id="filter" placeholder="what are looking for" class="todo-input" type="search">
         </form>
-
-        <ul class="todos" id="todos">
-            <!-- <li class="todo">
-                todo one
-                <a href="#" class="delete-todo">
-                    <i class="fas fa-trash"></i>
-                </a>
-            </li> -->
-        </ul>
+        <!-- <div class="message">nothing here</div> -->
+        <ul class="todos" id="todos"></ul>
     </main>
 
     <script src="./script.js"></script>
