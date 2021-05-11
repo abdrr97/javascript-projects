@@ -69,6 +69,10 @@ const links = [
     {
         label: 'Todo List',
         link: './todo-list',
+    },
+    {
+        label: 'Quiz App',
+        link: './quiz',
     }
 ]
 
