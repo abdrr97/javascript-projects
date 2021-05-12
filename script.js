@@ -83,6 +83,10 @@ const links = [
     {
         label: 'Feedback',
         link: './feedback',
+    },
+    {
+        label: 'Expanded FAQ',
+        link: './faq',
     }
 ]
 
