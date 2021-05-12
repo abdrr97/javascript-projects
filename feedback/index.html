@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Javascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="alert">
+            Choose an option ?
+            <button class="exit">&times;</button>
+        </div>
+        <section class="review-selection">
+            <p>
+                How satisfied are you with our
+                customer support performance?
+            </p>
+
+            <div class="card-deck"></div>
+            <button id="send-review">Send Review</button>
+        </section>
+
+        <section class="result">
+            <div class="heart">💘</div>
+            <p>Thank You!</p>
+            <strong>Feedback: <span id="review">Satisfied</span></strong>
+            <p>We'll use your feedback to improve our customer support</p>
+            <button id="refresh">refresh</button>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

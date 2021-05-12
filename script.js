@@ -74,6 +74,16 @@ const links = [
         label: 'Quiz App',
         link: './quiz',
     }
+    ,
+    {
+        label: 'Expanding Cards ',
+        link: './expanding-card',
+    }
+    ,
+    {
+        label: 'Feedback',
+        link: './feedback',
+    }
 ]
 
 links.forEach(({ link, label }, index) => {

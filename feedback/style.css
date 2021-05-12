@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fef9f2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  /* width: 50vh; */
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.351);
+  border-radius: 15px;
+}
+main .card-deck {
+  margin: 6vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .card-deck .card {
+  cursor: pointer;
+  padding: 1rem;
+}
+main .card-deck .card > .emoji {
+  font-size: 65px;
+}
+main .card-deck .card > .message {
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+main .card-deck .card:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+}
+
+.selected {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+}
+
+section button {
+  border: none;
+  background-color: #272727;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 20px;
+  max-width: 600px;
+  display: none;
+}
+
+.heart {
+  font-size: 60px;
+}
+
+#refresh {
+  margin: 20px 0;
+}
+.alert {
+  background-color: rgb(227, 61, 61);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 10px 0;
+  border-radius: 10px;
+  position: relative;
+
+  display: none;
+}
+
+.exit {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
