@@ -87,7 +87,6 @@ const links = [
 ]
 
 links.forEach(({ link, label }, index) => {
-    console.log(index);
     const a = document.createElement('a')
     const h5 = document.createElement('h5')
     a.setAttribute('href', link)
