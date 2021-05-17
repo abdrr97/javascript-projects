@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  color: #272727;
+
+  transition: background 0.4s;
+}
+
+#dark-mode-toggle {
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #272727;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.dark-mode {
+  color: white;
+  background-color: #272727;
+}
+.dark-mode #dark-mode-toggle {
+  background-color: white;
+}
