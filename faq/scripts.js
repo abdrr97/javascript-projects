@@ -38,9 +38,6 @@ faqs.forEach(function (faq) {
 
 const btnsToggle = document.querySelectorAll('.btn-toggle')
 
-
-
-
 btnsToggle.forEach(function (btnToggle) {
 
     btnToggle.addEventListener('click', function () {

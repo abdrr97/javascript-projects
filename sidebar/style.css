@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+main > nav {
+  background-color: #272727;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+main > nav button.btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  transition: left 1s;
+}
+
+aside {
+  position: absolute;
+  left: -200px;
+  top: 0;
+  bottom: 0;
+  background-color: rebeccapurple;
+  color: white;
+  width: 200px;
+  transition: left 0.4s;
+}
+aside > nav ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0 10px;
+}
+aside > nav ul > li {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+aside > nav ul > li a {
+  color: white;
+  text-decoration: none;
+}
+aside > nav ul > li:hover {
+  color: #272227;
+  background-color: white;
+}
+aside > nav ul > li:hover a {
+  color: #272227;
+}
+
+main.active aside {
+  left: 0;
+  box-shadow: 10px 0px 13px 2px rgba(0, 0, 0, 0.6);
+}
+main.active button.btn {
+  left: 200px;
+}
