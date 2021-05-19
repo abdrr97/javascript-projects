@@ -91,6 +91,10 @@ const links = [
     {
         label: 'Sidebar',
         link: './sidebar',
+    },
+    {
+        label: 'Expense Tracker',
+        link: './expense-tracker',
     }
 ]
 
