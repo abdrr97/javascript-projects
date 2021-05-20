@@ -33,7 +33,7 @@ function loadPosts(url) {
             postsElement.innerHTML = ''
             posts.forEach(function (post) {
                 postsElement.innerHTML += `
-                         <div class="card my-5">
+                        <div class="card my-5">
                             <div class="card-header"><u>user id</u> :${post.userId} - ${post.title} </div>
                             <div class="card-body">
                                 <p class="card-text">${post.body}</p>
