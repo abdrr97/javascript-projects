@@ -34,7 +34,7 @@ function loadPosts(url) {
             posts.forEach(function (post) {
                 postsElement.innerHTML += `
                          <div class="card my-5">
-                            <div class="card-header">${post.userId} ${post.title} </div>
+                            <div class="card-header"><u>user id</u> :${post.userId} - ${post.title} </div>
                             <div class="card-body">
                                 <p class="card-text">${post.body}</p>
                             </div>
@@ -52,10 +52,7 @@ function loadUsers() {
         })
         .then(function (users) {
             users.forEach(function (user) {
-                userSelectElement.innerHTML +=
-                    `
-                        <option value="${user.id}" > ${user.name} </option>
-                    `
+                userSelectElement.innerHTML += `<option value="${user.id}" > ${user.name} </option>`
             })
         })
 }
