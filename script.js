@@ -95,6 +95,10 @@ const links = [
     {
         label: 'Expense Tracker',
         link: './expense-tracker',
+    },
+    {
+        label: 'Users Posts',
+        link: './users-posts',
     }
 ]
 

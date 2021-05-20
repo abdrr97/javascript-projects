@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API (FETCH) | JAVASCRIPT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <select id="users-select" class="form-control"></select>
+
+
+        <div id="posts">
+            <div class="my-5 d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const userSelectElement = document.querySelector('#users-select')
+        const postsElement = document.querySelector('#posts')
+
+        let USER_API = 'http://jsonplaceholder.typicode.com/users'
+        let POST_API = 'http://jsonplaceholder.typicode.com/posts'
+
+        // this function load users from API
+        loadUsers()
+        loadPosts(POST_API)
+
+        userSelectElement.addEventListener('change', function (e) {
+            console.log(e.target.value)
+
+            let url = POST_API + '?userId=' + e.target.value
+            postsElement.innerHTML = `
+            <div class="my-5 d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            `
+            loadPosts(url)
+        })
+
+        function loadPosts(url) {
+
+            fetch(url)
+                .then(function (res) {
+                    return res.json()
+
+                })
+                .then(function (posts) {
+                    postsElement.innerHTML = ''
+                    posts.forEach(function (post) {
+                        postsElement.innerHTML += `
+                         <div class="card my-5">
+                            <div class="card-header">${post.userId} ${post.title} </div>
+                            <div class="card-body">
+                                <p class="card-text">${post.body}</p>
+                            </div>
+                        </div>
+                        `
+                    })
+                })
+
+        }
+
+        function loadUsers() {
+            fetch(USER_API)
+                .then(function (res) {
+                    return res.json()
+                })
+                .then(function (users) {
+                    users.forEach(function (user) {
+                        userSelectElement.innerHTML +=
+                            `
+                        <option value="${user.id}" > ${user.name} </option>
+                    `
+                    })
+                })
+        }
+
+    </script>
+
+</body>
+
+</html>
