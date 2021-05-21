@@ -1,46 +1,174 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Roboto|Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* 
+#414052
+#FB77A0
+#D451C8
+#FD8C8D
+#21212B
+#181820 */
+
+:root {
+  /* 
+--color :#FB77A0;
+--color :#D451C8;
+--color :#FD8C8D;
+--color :#21212B; */
+  --secondaryColor: #414052;
+  --primaryColor: #21212b;
+  --whiteColor: white;
+  --bgColor: #181820;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-.card {
-  transition: box-shadow 0.5s;
-}
-
-.card:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.235) !important;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.github-corner {
+  font-size: 1.5rem;
+  background-color: var(--bgColor);
   color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-.github-corner:hover {
-  color: #ccc;
+.container {
+  width: 50vw;
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav ul .tag {
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  border: 2.5px solid var(--secondaryColor);
+  cursor: pointer;
+  background-color: inherit;
+  transition: all 0.4s;
+}
+nav ul .tag:hover {
+  background-color: var(--secondaryColor);
+  transform: translateY(-5px);
+}
+nav ul .tag.active {
+  background-color: var(--secondaryColor);
 }
 
-#loading {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 5px solid #ccc;
-  border-top-color: rebeccapurple;
-  animation: spinner 0.2s infinite linear;
+.projects-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  flex-wrap: wrap;
 }
+.projects-section.is-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.projects-section.is-loading .loading {
+  display: flex;
+}
+
+a.project {
+  color: white;
+  text-decoration: none;
+}
+
+.project {
+  background-color: #21212b;
+  padding: 10px;
+  margin: 10px 5px;
+  width: 8em;
+  height: 150px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  transition: all 0.4s;
+}
+.project:hover {
+  border: 2.5px solid var(--secondaryColor);
+  box-shadow: 1px 5px 12px rgb(255 255 255 / 5%);
+  background-color: inherit;
+  transform: translateY(-10px);
+}
+.project span {
+  font-size: 15px;
+  color: var(--secondaryColor);
+}
+
+.btn--dark_mode {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--bgColor);
+  transition: background 0.4s;
+}
+.btn--dark_mode.is-dark {
+  background-color: white;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid transparent;
+  border-top-color: #ff7890;
+  border-bottom-color: #d451c8;
+  border-radius: 50%;
+  display: none;
+  animation: spinner 0.4s linear infinite;
+}
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+}
+
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1615px) {
+  .container {
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
   }
 }

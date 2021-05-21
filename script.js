@@ -1,113 +1,58 @@
-const spans = document.querySelectorAll('.word span');
+let DOM_PROJECTS_URL = './dom-projects.json', API_PROJECTS_URL = './api-projects.json'
 
-spans.forEach((span, idx) => {
-    span.addEventListener('mouseover', (e) => {
-        e.target.classList.add('active');
-    });
-    span.addEventListener('animationend', (e) => {
-        e.target.classList.remove('active');
-    });
-
-    // Initial animation
-    setTimeout(() => {
-        span.classList.add('active');
-    }, 1000 * (idx + 1))
-});
+const projectSection = document.querySelector('#projects-section')
+const darkModeBtn = document.querySelector('#dark-mode')
+const domTagBtn = document.querySelector('.dom-tag'), apiTagBtn = document.querySelector('.api-tag')
 
 
-const main = document.querySelector('#main')
+const loadAPI = async (url) => {
+    projectSection.classList.add('is-loading')
 
-const links = [
-    {
-        label: 'circle',
-        link: './circle',
-    },
-    {
-        label: 'switch',
-        link: './color-switch',
-    },
-    {
-        label: 'counter',
-        link: './counter',
-    },
-    {
-        label: 'switcher',
-        link: './font-switcher',
-    },
-    {
-        label: 'list',
-        link: './list',
-    },
-    {
-        label: 'emoji',
-        link: './emoji',
-    },
-    {
-        label: 'data binding',
-        link: './data-binding',
-    },
-    {
-        label: 'dark mode',
-        link: './dark-mode',
-    },
-    {
-        label: 'squad info',
-        link: './squad-info',
-    },
-    {
-        label: 'change the box pos',
-        link: './change-the-box-pos',
-    },
-    {
-        label: 'form validation',
-        link: './form-validation',
-    },
-    {
-        label: 'carousel',
-        link: './carousel',
-    },
-    {
-        label: 'Todo List',
-        link: './todo-list',
-    },
-    {
-        label: 'Quiz App',
-        link: './quiz',
+    const promise = await fetch(url)
+    const data = await promise.json()
+
+    data.map(({ project_title, project_path }) => {
+        projectSection.innerHTML += `
+        <a target="_blank" href="${project_path}" class="project">
+            <h5>${project_title.toUpperCase()}</h5>
+            <span>view project</span>
+        </a>
+        `
+    })
+
+    projectSection.classList.remove('is-loading')
+}
+
+const loadDOMProjects = async () => {
+    if (domTagBtn.classList.contains('active')) {
+        return
     }
-    ,
-    {
-        label: 'Expanding Cards ',
-        link: './expanding-card',
-    }
-    ,
-    {
-        label: 'Feedback',
-        link: './feedback',
-    },
-    {
-        label: 'Expanded FAQ',
-        link: './faq',
-    },
-    {
-        label: 'Sidebar',
-        link: './sidebar',
-    },
-    {
-        label: 'Expense Tracker',
-        link: './expense-tracker',
-    },
-    {
-        label: 'Users Posts',
-        link: './users-posts',
-    }
-]
 
-links.forEach(({ link, label }, index) => {
-    const a = document.createElement('a')
-    const h5 = document.createElement('h5')
-    a.setAttribute('href', link)
-    a.className = 'btn-link col-4 col-sm-4 col-lg-3 card my-4 mx-2 p-3'
-    h5.innerText = label.toUpperCase()
-    a.appendChild(h5)
-    main.appendChild(a)
-})
+    projectSection.innerHTML = '<div class="loading"></div>'
+    domTagBtn.classList.add('active')
+    apiTagBtn.classList.remove('active')
+
+    loadAPI(DOM_PROJECTS_URL)
+}
+
+const loadAPIProjects = async () => {
+    if (apiTagBtn.classList.contains('active')) {
+        return
+    }
+
+    projectSection.innerHTML = '<div class="loading"></div>'
+    domTagBtn.classList.remove('active')
+    apiTagBtn.classList.add('active')
+
+    loadAPI(API_PROJECTS_URL)
+}
+
+
+
+
+// events
+domTagBtn.addEventListener('click', loadDOMProjects)
+apiTagBtn.addEventListener('click', loadAPIProjects)
+darkModeBtn.addEventListener('click', () => alert("I'm sill working on it 😋"))
+
+loadDOMProjects()
