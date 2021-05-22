@@ -1,4 +1,4 @@
-let DOM_PROJECTS_URL = './dom-projects.json', API_PROJECTS_URL = './api-projects.json'
+let DOM_PROJECTS_URL = './assets/api/dom-projects.json', API_PROJECTS_URL = './assets/api/api-projects.json'
 
 const projectSection = document.querySelector('#projects-section')
 const darkModeBtn = document.querySelector('#dark-mode')
@@ -71,11 +71,11 @@ loadDOMProjects()
 function setTheme(mode) {
     switch (mode) {
         case 'light':
-            theme_style.href = 'light-mode.css';
+            theme_style.href = './assets/css/light-mode.css';
             darkModeBtn.classList.remove('is-dark')
             break;
         case 'dark':
-            theme_style.href = 'dark-mode.css'
+            theme_style.href = './assets/css/dark-mode.css'
             darkModeBtn.classList.add('is-dark')
             break;
     }

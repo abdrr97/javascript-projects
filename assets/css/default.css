@@ -106,7 +106,7 @@ a.project {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-image: url('./light.png');
+  background-image: url('../images/light.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right center;
@@ -114,7 +114,7 @@ a.project {
   transition: background 0.4s;
 }
 .btn--dark_mode.is-dark {
-  background-image: url('./dark.png');
+  background-image: url('../images/dark.png');
   background-color: white;
 }
 
