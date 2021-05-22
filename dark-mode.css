@@ -1,0 +1,8 @@
+/* dark mode */
+:root {
+  --secondaryColor: #414052;
+  --primaryColor: #21212b;
+  --whiteColor: white;
+  --bgColor: #181820;
+  --boxShadow: 1px 5px 12px rgb(255 255 255 / 5%);
+}

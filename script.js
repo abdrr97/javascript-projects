@@ -3,7 +3,11 @@ let DOM_PROJECTS_URL = './dom-projects.json', API_PROJECTS_URL = './api-projects
 const projectSection = document.querySelector('#projects-section')
 const darkModeBtn = document.querySelector('#dark-mode')
 const domTagBtn = document.querySelector('.dom-tag'), apiTagBtn = document.querySelector('.api-tag')
+let theme_style = document.querySelector('#theme_style')
 
+let theme = localStorage.getItem('theme')
+
+init(theme)
 
 const loadAPI = async (url) => {
     projectSection.classList.add('is-loading')
@@ -53,6 +57,34 @@ const loadAPIProjects = async () => {
 // events
 domTagBtn.addEventListener('click', loadDOMProjects)
 apiTagBtn.addEventListener('click', loadAPIProjects)
-darkModeBtn.addEventListener('click', () => alert("I'm sill working on it 😋"))
+darkModeBtn.addEventListener('click', () => {
+    darkModeBtn.classList.toggle('is-dark')
+    let isDarkMode = darkModeBtn.classList.contains('is-dark')
+
+    let mode = isDarkMode ? 'dark' : 'light'
+    setTheme(mode)
+})
 
 loadDOMProjects()
+
+
+function setTheme(mode) {
+    switch (mode) {
+        case 'light':
+            theme_style.href = 'light-mode.css';
+            darkModeBtn.classList.remove('is-dark')
+            break;
+        case 'dark':
+            theme_style.href = 'dark-mode.css'
+            darkModeBtn.classList.add('is-dark')
+            break;
+    }
+    localStorage.setItem('theme', mode)
+}
+function init(_) {
+    if (_ == null || _ == undefined) {
+        setTheme('light')
+    } else {
+        setTheme(_)
+    }
+}

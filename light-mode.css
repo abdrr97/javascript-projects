@@ -1,0 +1,14 @@
+/* 
+#414052
+#FB77A0
+#D451C8
+#FD8C8D
+#21212B
+#181820 */
+:root {
+  --secondaryColor: #414052;
+  --primaryColor: white;
+  --whiteColor: #181820;
+  --bgColor: rgb(235, 233, 233);
+  --boxShadow: 1px 5px 12px rgba(0, 0, 0, 0.63);
+}
