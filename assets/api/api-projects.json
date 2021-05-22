@@ -2,5 +2,13 @@
   {
     "project_title": "Users Posts",
     "project_path": "./users-posts"
+  },
+  {
+    "project_title": "Movie App",
+    "project_path": "./movie-app"
+  },
+  {
+    "project_title": "Random Food Image",
+    "project_path": "./food-app"
   }
 ]
