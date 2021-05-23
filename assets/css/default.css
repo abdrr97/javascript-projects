@@ -159,6 +159,7 @@ footer a:hover {
   right: 0;
   color: var(--whiteColor);
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 svg {
