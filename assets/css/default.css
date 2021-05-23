@@ -131,6 +131,8 @@ a.project {
   display: none;
   animation: spinner 0.4s linear infinite;
 }
+/* github logo */
+
 .github-corner {
   position: absolute;
   top: 0;
@@ -138,7 +140,6 @@ a.project {
   color: var(--whiteColor);
   cursor: pointer;
 }
-/* github logo */
 
 svg {
   fill: var(--whiteColor);
@@ -146,6 +147,16 @@ svg {
 .octo-arm,
 .octo-body {
   fill: var(--primaryColor);
+}
+.github-corner:hover .octo-arm,
+.github-corner:hover .octo-body {
+  fill: var(--whiteColor);
+}
+.github-corner:hover svg {
+  fill: var(--primaryColor);
+}
+.github-corner:hover {
+  color: var(--primaryColor);
 }
 @keyframes spinner {
   to {
