@@ -164,6 +164,7 @@ footer a:hover {
 
 svg {
   fill: var(--whiteColor);
+  transition: all 0.4s;
 }
 .octo-arm,
 .octo-body {
