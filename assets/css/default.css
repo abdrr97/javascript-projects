@@ -131,6 +131,26 @@ a.project {
   display: none;
   animation: spinner 0.4s linear infinite;
 }
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem 0;
+  font-weight: bold;
+  border-top: 1px solid var(--whiteColor);
+}
+footer a {
+  text-decoration: none;
+  color: var(--whiteColor);
+  transition: all 0.4s;
+  color: #d451c8;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #ff7890;
+  letter-spacing: 1.3px;
+}
+
 /* github logo */
 
 .github-corner {
