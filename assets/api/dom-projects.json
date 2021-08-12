@@ -4,12 +4,24 @@
     "project_path": "./circle"
   },
   {
-    "project_title": "switch",
-    "project_path": "./color-switch"
-  },
-  {
     "project_title": "counter",
     "project_path": "./counter"
+  },
+  {
+    "project_title": "emoji",
+    "project_path": "./emoji"
+  },
+  {
+    "project_title": "change the box pos",
+    "project_path": "./change-the-box-pos"
+  },
+  {
+    "project_title": "dark mode",
+    "project_path": "./dark-mode"
+  },
+  {
+    "project_title": "background switch",
+    "project_path": "./color-switch"
   },
   {
     "project_title": "Font Switcher",
@@ -18,14 +30,6 @@
   {
     "project_title": "list",
     "project_path": "./list"
-  },
-  {
-    "project_title": "dark mode",
-    "project_path": "./dark-mode"
-  },
-  {
-    "project_title": "change the box pos",
-    "project_path": "./change-the-box-pos"
   },
   {
     "project_title": "form validation",
