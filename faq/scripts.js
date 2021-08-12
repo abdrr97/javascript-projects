@@ -47,12 +47,6 @@ btnsToggle.forEach(function (btnToggle) {
     let isExpanded =
       btnToggle.parentElement.parentElement.classList.contains('expanded')
 
-    // if (isExpanded) {
-    //     btnToggle.innerHTML = '<i class="fa fa-times-circle"></i>'
-    // } else {
-    //     btnToggle.innerHTML = '<i class="fa fa-chevron-down"></i>'
-    // }
-
     btnToggle.innerHTML = isExpanded
       ? '<i class="fa fa-times-circle"></i>'
       : '<i class="fa fa-chevron-down"></i>'
