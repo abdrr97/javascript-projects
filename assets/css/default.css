@@ -17,14 +17,17 @@ body {
 
   transition: all 0.2s;
 }
+
 .container {
   width: 50vw;
 }
+
 .container header {
   display: flex;
   justify-content: space-between;
   margin: 3rem 0;
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -32,6 +35,7 @@ nav ul {
   justify-content: flex-start;
   align-items: center;
 }
+
 nav ul .tag {
   margin: 0 5px;
   padding: 0.5rem 1rem;
@@ -43,11 +47,13 @@ nav ul .tag {
   background-color: inherit;
   transition: all 0.4s;
 }
+
 nav ul .tag:hover {
   background-color: var(--secondaryColor);
   transform: translateY(-5px);
   color: white;
 }
+
 nav ul .tag.active {
   background-color: var(--secondaryColor);
   transform: translateY(-5px);
@@ -63,12 +69,14 @@ nav ul .tag.active {
 
   transition: flex-wrap 0.4s;
 }
+
 .projects-section.is-loading {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
 }
+
 .projects-section.is-loading .loading {
   display: flex;
 }
@@ -92,12 +100,14 @@ a.project {
   align-items: flex-start;
   transition: all 0.4s;
 }
+
 .project:hover {
   border: 2.5px solid var(--secondaryColor);
   box-shadow: var(--boxShadow);
   background-color: inherit;
   transform: translateY(-10px);
 }
+
 .project span {
   font-size: 15px;
   color: var(--secondaryColor);
@@ -116,6 +126,7 @@ a.project {
   background-color: #21212b;
   transition: background 0.4s;
 }
+
 .btn--dark_mode.is-dark {
   background-image: url('../images/dark.png');
   background-color: white;
@@ -139,12 +150,14 @@ footer {
   font-weight: bold;
   border-top: 1px solid var(--whiteColor);
 }
+
 footer a {
   text-decoration: none;
   color: var(--whiteColor);
   transition: all 0.4s;
   color: #d451c8;
 }
+
 footer a:hover {
   text-decoration: underline;
   color: #ff7890;
@@ -166,38 +179,47 @@ svg {
   fill: var(--whiteColor);
   transition: all 0.4s;
 }
+
 .octo-arm,
 .octo-body {
   fill: var(--primaryColor);
 }
+
 .github-corner:hover .octo-arm,
 .github-corner:hover .octo-body {
   fill: var(--whiteColor);
 }
+
 .github-corner:hover svg {
   fill: var(--primaryColor);
 }
+
 .github-corner:hover {
   color: var(--primaryColor);
 }
+
 @keyframes spinner {
   to {
     transform: rotate(360deg);
   }
 }
+
 @media screen and (max-width: 1615px) {
   .container {
     width: 85vw;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .container {
     width: 85vw;
   }
+
   .projects-section {
     justify-content: center;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 90vw;
@@ -212,13 +234,16 @@ svg {
     justify-content: center;
   }
 }
+
 @media screen and (max-width: 768px) {
   .container {
     width: 90vw;
   }
+
   .projects-section {
     justify-content: center;
   }
+
   svg {
     width: 50px;
     height: 50px;
