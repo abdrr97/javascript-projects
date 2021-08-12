@@ -1,21 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
 #hover {
-  width: 150px;
-  height: 150px;
-  /* padding: 10px 20px; */
-  background-color: rebeccapurple;
-  font-size: 13px;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(102, 51, 153, 0.767);
+  font-size: 20px;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color: black;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
   transition: transform 0.6s;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }

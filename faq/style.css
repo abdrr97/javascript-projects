@@ -18,10 +18,12 @@ body {
 main {
   padding: 5rem 0;
 }
+
 .card.expanded {
   background-color: white;
   box-shadow: 0px 6px 10px rgb(0 0 0 / 40%);
 }
+
 .card {
   margin: 1rem 2rem;
   border: 1px solid #272727;
@@ -31,23 +33,28 @@ main {
 
   transition: all 0.6s;
 }
+
 .card .card-header {
   display: flex;
   justify-content: space-between;
   margin: 10px 15px;
 }
+
 .card .card-body {
   display: none;
 }
+
 .card.expanded .card-body {
   display: block;
 }
+
 .card .card-header button {
   border: none;
   background-color: transparent;
   font-size: 20px;
   cursor: pointer;
 }
-.card .card-header button > i.fa-times-circle {
+
+.card .card-header button>i.fa-times-circle {
   color: rgb(123, 123, 123);
 }
