@@ -3,10 +3,10 @@ let DOM_PROJECTS_URL = './assets/api/dom-projects.json',
 
 const projectSection = document.querySelector('#projects-section')
 const darkModeBtn = document.querySelector('#dark-mode')
+
 const domTagBtn = document.querySelector('.dom-tag'),
   apiTagBtn = document.querySelector('.api-tag')
 let theme_style = document.querySelector('#theme_style')
-
 let theme = localStorage.getItem('theme')
 
 init(theme)
@@ -56,7 +56,9 @@ const loadAPIProjects = async () => {
 // events
 domTagBtn.addEventListener('click', loadDOMProjects)
 apiTagBtn.addEventListener('click', loadAPIProjects)
+
 darkModeBtn.addEventListener('click', () => {
+  console.log('dark')
   darkModeBtn.classList.toggle('is-dark')
   let isDarkMode = darkModeBtn.classList.contains('is-dark')
 
