@@ -62,5 +62,9 @@
   {
     "project_title": "Expense Tracker",
     "project_path": "./expense-tracker"
+  },
+  {
+    "project_title": "Rounded Circle",
+    "project_path": "./rounded-circle"
   }
 ]
