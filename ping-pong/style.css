@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: antiquewhite;
+}
+
+.canva {
+    background: #000;
+    width: 800px;
+    height: 500px;
+    position: relative;
+}
+
+#box {
+    background: #fff;
+    position: absolute;
+}
+
+#btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rebeccapurple;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#btn:hover {
+    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.315);
+}
+
+#btn:disabled:hover {
+    background-color: rgb(47, 20, 75);
+}
+
+.fps-input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 20px 0;
+}
+
+.game__settings {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
