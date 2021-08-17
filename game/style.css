@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background: rgb(255, 244, 230);
+}
+
+#board {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: #2f2f2f;
+    position: relative;
+}
+
+.line {
+    width: 10px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.player {
+    width: 10px;
+    height: 60px;
+    background: white;
+    /* transform: translateY(-50%); */
+    position: absolute;
+    /* top: 55%; */
+}
+
+#player-1 {
+    left: 20px;
+}
+
+#player-2 {
+    right: 20px;
+}
+
+#pong {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+}
