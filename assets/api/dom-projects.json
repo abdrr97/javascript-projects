@@ -66,5 +66,9 @@
   {
     "project_title": "Rounded Circle",
     "project_path": "./rounded-circle"
+  },
+  {
+    "project_title": "Ping Pong",
+    "project_path": "./ping-pong"
   }
 ]
