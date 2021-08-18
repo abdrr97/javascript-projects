@@ -17,8 +17,8 @@ const board = {
 const pong = {
   x: board.width / 2,
   y: board.height / 2,
-  xSpeed: 15,
-  ySpeed: 13,
+  xSpeed: 4,
+  ySpeed: 4,
   width: 20,
   height: 20,
 }
@@ -56,7 +56,7 @@ gameLoop = setInterval(() => {
   // playerOne
   checkCollision()
   playerOne.y = pong.y
-  playerTwo.y = pong.y
+  // playerTwo.y = pong.y
 
   //   collision with the board
   if (pong.y >= board.height - pong.height || pong.y <= 0) pong.ySpeed *= -1
