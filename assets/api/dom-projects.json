@@ -32,6 +32,10 @@
     "project_path": "./list"
   },
   {
+    "project_title": "Ping Pong",
+    "project_path": "./game"
+  },
+  {
     "project_title": "form validation",
     "project_path": "./form-validation"
   },
@@ -66,9 +70,5 @@
   {
     "project_title": "Rounded Circle",
     "project_path": "./rounded-circle"
-  },
-  {
-    "project_title": "Ping Pong",
-    "project_path": "./ping-pong"
   }
 ]

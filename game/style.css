@@ -48,24 +48,24 @@ body {
 .player {
     width: 10px;
     height: 60px;
-    background: white;
-    /* transform: translateY(-50%); */
     position: absolute;
-    /* top: 55%; */
+    border: 2px solid white;
 }
 
 #player-1 {
     left: 20px;
+    background: red;
 }
 
 #player-2 {
     right: 20px;
+    background: rgb(46, 46, 255);
 }
 
 #pong {
     width: 20px;
     height: 20px;
-    background: blue;
+    background: white;
     position: absolute;
     top: 50%;
     /* transform: translateY(-50%); */
